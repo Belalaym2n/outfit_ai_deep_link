@@ -14,18 +14,17 @@
     const memberId = memberIndex !== -1 ? parts[memberIndex + 1] : null;
 
     if (memberId) {
-      // 1. Try to open the app
-      window.location.href = 'yourapp://member/' + memberId;
+      // 🔥 افتح الأبليكيشن
+      window.location.href = 'outfitai://member/' + memberId;
 
-      // 2. Fallback → Play Store if app not installed
+      // 🔥 fallback للـ Play Store
       setTimeout(function () {
         window.location.href =
-          'https://play.google.com/store/apps/details?id=com.yourcompany.yourapp';
+          'https://play.google.com/store/apps/details?id=com.outfit.ai';
       }, 2000);
     } else {
-      // No member id → go to Play Store directly
       window.location.href =
-        'https://play.google.com/store/apps/details?id=com.yourcompany.yourapp';
+        'https://play.google.com/store/apps/details?id=com.outfit.ai';
     }
   </script>
 </body>
