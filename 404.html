@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Opening Outfit AI...</title>
+</head>
+<body>
+  <p style="font-family:sans-serif;text-align:center;margin-top:40px">
+    Opening Outfit AI...
+  </p>
+
+  <script>
+    const parts = window.location.pathname.split('/');
+    const memberIndex = parts.indexOf('member');
+    const memberId = memberIndex !== -1 ? parts[memberIndex + 1] : null;
+
+    if (memberId) {
+      window.location.href = 'outfitai://member/' + memberId;
+
+      setTimeout(function () {
+        window.location.href =
+          'https://play.google.com/store/apps/details?id=com.yourapp.package';
+      }, 2000);
+    } else {
+      window.location.href =
+        'https://play.google.com/store/apps/details?id=com.yourapp.package';
+    }
+  </script>
+</body>
+</html>
